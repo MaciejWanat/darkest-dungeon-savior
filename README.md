@@ -1,2 +1,2 @@
 # darkest-dungeon-savegame
-Very simple console program which allows you to make backup of local savegames of Darkest Dungeon.
+Simple windows forms appliaction which allows you to make backups of local savegames of Darkest Dungeon.
