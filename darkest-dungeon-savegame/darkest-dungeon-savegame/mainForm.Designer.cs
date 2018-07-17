@@ -81,7 +81,7 @@
             // Output_lb
             // 
             this.Output_lb.AutoSize = true;
-            this.Output_lb.Location = new System.Drawing.Point(15, 34);
+            this.Output_lb.Location = new System.Drawing.Point(16, 34);
             this.Output_lb.Name = "Output_lb";
             this.Output_lb.Size = new System.Drawing.Size(35, 13);
             this.Output_lb.TabIndex = 4;
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 257);
+            this.ClientSize = new System.Drawing.Size(500, 248);
             this.Controls.Add(this.Slots_gb);
             this.Controls.Add(this.CurrentLoadPath_lb);
             this.Controls.Add(this.Output_lb);
