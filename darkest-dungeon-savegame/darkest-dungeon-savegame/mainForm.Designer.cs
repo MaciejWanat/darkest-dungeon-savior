@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.SaveGame_bt = new System.Windows.Forms.Button();
             this.LoadGame_bt = new System.Windows.Forms.Button();
-            this.LoadPath_tb = new System.Windows.Forms.TextBox();
             this.SetLoadPath_bt = new System.Windows.Forms.Button();
             this.Output_lb = new System.Windows.Forms.Label();
             this.CurrentLoadPath_lb = new System.Windows.Forms.Label();
@@ -50,7 +49,7 @@
             // 
             // SaveGame_bt
             // 
-            this.SaveGame_bt.Location = new System.Drawing.Point(25, 201);
+            this.SaveGame_bt.Location = new System.Drawing.Point(117, 201);
             this.SaveGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SaveGame_bt.Name = "SaveGame_bt";
             this.SaveGame_bt.Size = new System.Drawing.Size(100, 28);
@@ -61,7 +60,7 @@
             // 
             // LoadGame_bt
             // 
-            this.LoadGame_bt.Location = new System.Drawing.Point(133, 201);
+            this.LoadGame_bt.Location = new System.Drawing.Point(225, 202);
             this.LoadGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoadGame_bt.Name = "LoadGame_bt";
             this.LoadGame_bt.Size = new System.Drawing.Size(100, 28);
@@ -70,21 +69,12 @@
             this.LoadGame_bt.UseVisualStyleBackColor = true;
             this.LoadGame_bt.Click += new System.EventHandler(this.LoadGame_bt_Click);
             // 
-            // LoadPath_tb
-            // 
-            this.LoadPath_tb.Enabled = false;
-            this.LoadPath_tb.Location = new System.Drawing.Point(25, 237);
-            this.LoadPath_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.LoadPath_tb.Name = "LoadPath_tb";
-            this.LoadPath_tb.Size = new System.Drawing.Size(449, 22);
-            this.LoadPath_tb.TabIndex = 2;
-            // 
             // SetLoadPath_bt
             // 
-            this.SetLoadPath_bt.Location = new System.Drawing.Point(496, 234);
+            this.SetLoadPath_bt.Location = new System.Drawing.Point(390, 201);
             this.SetLoadPath_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SetLoadPath_bt.Name = "SetLoadPath_bt";
-            this.SetLoadPath_bt.Size = new System.Drawing.Size(156, 28);
+            this.SetLoadPath_bt.Size = new System.Drawing.Size(117, 28);
             this.SetLoadPath_bt.TabIndex = 3;
             this.SetLoadPath_bt.Text = "Set saves path";
             this.SetLoadPath_bt.UseVisualStyleBackColor = true;
@@ -93,7 +83,7 @@
             // Output_lb
             // 
             this.Output_lb.AutoSize = true;
-            this.Output_lb.Location = new System.Drawing.Point(130, 96);
+            this.Output_lb.Location = new System.Drawing.Point(117, 131);
             this.Output_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Output_lb.Name = "Output_lb";
             this.Output_lb.Size = new System.Drawing.Size(190, 17);
@@ -105,9 +95,9 @@
             // 
             this.CurrentLoadPath_lb.AutoSize = true;
             this.CurrentLoadPath_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(22, 36);
+            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(10, 42);
             this.CurrentLoadPath_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.CurrentLoadPath_lb.MaximumSize = new System.Drawing.Size(650, 32);
+            this.CurrentLoadPath_lb.MaximumSize = new System.Drawing.Size(555, 48);
             this.CurrentLoadPath_lb.Name = "CurrentLoadPath_lb";
             this.CurrentLoadPath_lb.Size = new System.Drawing.Size(140, 17);
             this.CurrentLoadPath_lb.TabIndex = 5;
@@ -157,7 +147,7 @@
             this.Slots_gb.Controls.Add(this.Slot1_rb);
             this.Slots_gb.Controls.Add(this.Slot3_rb);
             this.Slots_gb.Controls.Add(this.Slot2_rb);
-            this.Slots_gb.Location = new System.Drawing.Point(25, 87);
+            this.Slots_gb.Location = new System.Drawing.Point(13, 122);
             this.Slots_gb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Slots_gb.Name = "Slots_gb";
             this.Slots_gb.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -173,7 +163,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(667, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(528, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -204,12 +194,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 274);
+            this.ClientSize = new System.Drawing.Size(528, 242);
             this.Controls.Add(this.Slots_gb);
             this.Controls.Add(this.CurrentLoadPath_lb);
             this.Controls.Add(this.Output_lb);
             this.Controls.Add(this.SetLoadPath_bt);
-            this.Controls.Add(this.LoadPath_tb);
             this.Controls.Add(this.LoadGame_bt);
             this.Controls.Add(this.SaveGame_bt);
             this.Controls.Add(this.menuStrip1);
@@ -233,7 +222,6 @@
 
         private System.Windows.Forms.Button SaveGame_bt;
         private System.Windows.Forms.Button LoadGame_bt;
-        private System.Windows.Forms.TextBox LoadPath_tb;
         private System.Windows.Forms.Button SetLoadPath_bt;
         private System.Windows.Forms.Label Output_lb;
         private System.Windows.Forms.Label CurrentLoadPath_lb;

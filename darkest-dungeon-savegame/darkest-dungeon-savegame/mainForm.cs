@@ -156,10 +156,10 @@ namespace darkest_dungeon_savegame
             {
                 if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    LoadPath_tb.Text = folderBrowserDialog1.SelectedPath;
-                    if (Directory.Exists(LoadPath_tb.Text))
+                    var path = folderBrowserDialog1.SelectedPath;
+                    if (Directory.Exists(path))
                     {
-                        Config.SetLoadString(LoadPath_tb.Text);
+                        Config.SetLoadString(path);
 
                         string configString = File.ReadAllText(Config.ConfigString).TrimEnd('\\');
                         dynamic json = JsonConvert.DeserializeObject(configString);
@@ -175,6 +175,7 @@ namespace darkest_dungeon_savegame
                     {
                         Output_lb.Text = "Your input isn't a directory.";
                     }
+                    
                 }                
             }
             catch(Exception)
