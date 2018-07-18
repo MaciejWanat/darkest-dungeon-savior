@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.SaveGame_bt = new System.Windows.Forms.Button();
             this.LoadGame_bt = new System.Windows.Forms.Button();
             this.LoadPath_tb = new System.Windows.Forms.TextBox();
@@ -171,6 +172,7 @@
             this.Controls.Add(this.LoadGame_bt);
             this.Controls.Add(this.SaveGame_bt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Darkest Dungeon GameSaver";
