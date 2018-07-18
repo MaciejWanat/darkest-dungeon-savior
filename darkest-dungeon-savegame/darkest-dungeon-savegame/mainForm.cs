@@ -121,19 +121,19 @@ namespace darkest_dungeon_savegame
                         {
                             case "Slot1_rb":
 
-                                targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_1\");
+                                targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_1");
                                 Directory.CreateDirectory(targetDir);
                                 FileHelper.LoadSaveGames(targetDir);
                                 break;
 
                             case "Slot2_rb":
-                                targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_2\");
+                                targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_2");
                                 Directory.CreateDirectory(targetDir);
                                 FileHelper.LoadSaveGames(targetDir);
                                 break;
 
                             case "Slot3_rb":
-                                targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_3\");
+                                targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_3");
                                 Directory.CreateDirectory(targetDir);
                                 FileHelper.LoadSaveGames(targetDir);
                                 break;
