@@ -164,7 +164,7 @@ namespace darkest_dungeon_savegame
                             DialogResult prompt = MessageBox.Show("This folder doesn't look like it contains savegames. Are you sure you want to set it as a directory?",
                             "Setting directory", MessageBoxButtons.YesNo);
 
-                            if (prompt == DialogResult.Yes)
+                            if (prompt == DialogResult.No)
                             {
                                 throw new Exception();
                             }
