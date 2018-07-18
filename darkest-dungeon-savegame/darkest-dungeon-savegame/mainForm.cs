@@ -184,6 +184,22 @@ namespace darkest_dungeon_savegame
             
         }
 
+
+        private void howToFindSavesPathToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult prompt = MessageBox.Show("There are few typical locations for D savegames. \nSteam usually stores it in a folder \"262060\". \nFew possible locations:\n"+
+                "\n- C:\\Program Files (x86)\\Steam\\userdata\\<your_user_id>\\262060 |(Steam)" +
+                "\n- C:\\Users\\<your username>\\Documents\\Darkest | (GOG)" +
+                "\n- /Users/<username>/Library/Application Support/Darkest | (MAC)",
+                "How to find DD saves path", MessageBoxButtons.OK);
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult prompt = MessageBox.Show("Insert help instructions",
+            "How to find DD saves path", MessageBoxButtons.OK);
+        }
+
         private void Slot1_rb_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -208,5 +224,6 @@ namespace darkest_dungeon_savegame
         {
 
         }
+
     }
 }

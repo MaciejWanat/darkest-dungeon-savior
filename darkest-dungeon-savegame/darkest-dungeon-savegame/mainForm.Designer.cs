@@ -40,12 +40,17 @@
             this.Slot3_rb = new System.Windows.Forms.RadioButton();
             this.Slots_gb = new System.Windows.Forms.GroupBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToFindSavesPathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Slots_gb.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveGame_bt
             // 
-            this.SaveGame_bt.Location = new System.Drawing.Point(16, 225);
+            this.SaveGame_bt.Location = new System.Drawing.Point(25, 201);
             this.SaveGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SaveGame_bt.Name = "SaveGame_bt";
             this.SaveGame_bt.Size = new System.Drawing.Size(100, 28);
@@ -56,7 +61,7 @@
             // 
             // LoadGame_bt
             // 
-            this.LoadGame_bt.Location = new System.Drawing.Point(124, 225);
+            this.LoadGame_bt.Location = new System.Drawing.Point(133, 201);
             this.LoadGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoadGame_bt.Name = "LoadGame_bt";
             this.LoadGame_bt.Size = new System.Drawing.Size(100, 28);
@@ -68,7 +73,7 @@
             // LoadPath_tb
             // 
             this.LoadPath_tb.Enabled = false;
-            this.LoadPath_tb.Location = new System.Drawing.Point(16, 261);
+            this.LoadPath_tb.Location = new System.Drawing.Point(25, 237);
             this.LoadPath_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoadPath_tb.Name = "LoadPath_tb";
             this.LoadPath_tb.Size = new System.Drawing.Size(449, 22);
@@ -76,7 +81,7 @@
             // 
             // SetLoadPath_bt
             // 
-            this.SetLoadPath_bt.Location = new System.Drawing.Point(487, 258);
+            this.SetLoadPath_bt.Location = new System.Drawing.Point(496, 234);
             this.SetLoadPath_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SetLoadPath_bt.Name = "SetLoadPath_bt";
             this.SetLoadPath_bt.Size = new System.Drawing.Size(156, 28);
@@ -88,7 +93,7 @@
             // Output_lb
             // 
             this.Output_lb.AutoSize = true;
-            this.Output_lb.Location = new System.Drawing.Point(21, 42);
+            this.Output_lb.Location = new System.Drawing.Point(130, 96);
             this.Output_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Output_lb.Name = "Output_lb";
             this.Output_lb.Size = new System.Drawing.Size(190, 17);
@@ -100,8 +105,9 @@
             // 
             this.CurrentLoadPath_lb.AutoSize = true;
             this.CurrentLoadPath_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(21, 11);
+            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(22, 36);
             this.CurrentLoadPath_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CurrentLoadPath_lb.MaximumSize = new System.Drawing.Size(650, 32);
             this.CurrentLoadPath_lb.Name = "CurrentLoadPath_lb";
             this.CurrentLoadPath_lb.Size = new System.Drawing.Size(140, 17);
             this.CurrentLoadPath_lb.TabIndex = 5;
@@ -151,7 +157,7 @@
             this.Slots_gb.Controls.Add(this.Slot1_rb);
             this.Slots_gb.Controls.Add(this.Slot3_rb);
             this.Slots_gb.Controls.Add(this.Slot2_rb);
-            this.Slots_gb.Location = new System.Drawing.Point(16, 111);
+            this.Slots_gb.Location = new System.Drawing.Point(25, 87);
             this.Slots_gb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Slots_gb.Name = "Slots_gb";
             this.Slots_gb.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -160,11 +166,45 @@
             this.Slots_gb.TabStop = false;
             this.Slots_gb.Text = "Slots";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(667, 28);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.howToFindSavesPathToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // howToFindSavesPathToolStripMenuItem
+            // 
+            this.howToFindSavesPathToolStripMenuItem.Name = "howToFindSavesPathToolStripMenuItem";
+            this.howToFindSavesPathToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.howToFindSavesPathToolStripMenuItem.Text = "How to find saves path";
+            this.howToFindSavesPathToolStripMenuItem.Click += new System.EventHandler(this.howToFindSavesPathToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 305);
+            this.ClientSize = new System.Drawing.Size(667, 274);
             this.Controls.Add(this.Slots_gb);
             this.Controls.Add(this.CurrentLoadPath_lb);
             this.Controls.Add(this.Output_lb);
@@ -172,14 +212,18 @@
             this.Controls.Add(this.LoadPath_tb);
             this.Controls.Add(this.LoadGame_bt);
             this.Controls.Add(this.SaveGame_bt);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Darkest Dungeon GameSaver";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Slots_gb.ResumeLayout(false);
             this.Slots_gb.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,6 +242,10 @@
         private System.Windows.Forms.RadioButton Slot3_rb;
         private System.Windows.Forms.GroupBox Slots_gb;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem howToFindSavesPathToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
