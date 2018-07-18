@@ -197,7 +197,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Darkest Dungeon GameSaver";
+            this.Text = "Darkest Dungeon Savior";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Slots_gb.ResumeLayout(false);
             this.Slots_gb.PerformLayout();

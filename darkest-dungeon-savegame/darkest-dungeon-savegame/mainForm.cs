@@ -26,7 +26,7 @@ namespace darkest_dungeon_savegame
             if (!File.Exists(Config.ConfigString))
             {
                 //Create blank config file
-                Output_lb.Text = "Creating new config. Please set Darkest Dungeon directory with SaveGames (262060).";
+                Output_lb.Text = "Creating new config. Please set Darkest Dungeon directory with SaveGames.";
                 dynamic json = JsonConvert.DeserializeObject("{}");
 
                 json.LoadString = "None";                
@@ -212,7 +212,7 @@ namespace darkest_dungeon_savegame
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult prompt = MessageBox.Show("This is the application for managing savegames of the Darkest Dungeon game.\n" +
+            DialogResult prompt = MessageBox.Show("Darkest Dungeon Savior is the application for managing savegames of the Darkest Dungeon game.\n" +
                 "Interface:\n\n" +
                 "- Save savegame copy: Make local copy of DD saves at selected slot\n" +
                 "- Load savegame copy: Load local copy from selected slot to DD saves\n" +
