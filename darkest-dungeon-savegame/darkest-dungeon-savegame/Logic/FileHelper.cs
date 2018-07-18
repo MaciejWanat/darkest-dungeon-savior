@@ -13,36 +13,46 @@ namespace darkest_dungeon_savegame.Logic
         {
             foreach (string dirPath in Directory.GetDirectories(Config.LoadString, "*", SearchOption.AllDirectories))
             {
-                Directory.CreateDirectory(dirPath.Replace(Config.LoadString, destinationPath));
+                if (dirPath.Contains("profile_"))
+                    Directory.CreateDirectory(dirPath.Replace(Config.LoadString, destinationPath));
             }
-                
+               
             foreach (string newPath in Directory.GetFiles(Config.LoadString, "*.*", SearchOption.AllDirectories))
             {
-                File.Copy(newPath, newPath.Replace(Config.LoadString, destinationPath), true);
-            }                
+                if (newPath.Contains("profile_"))
+                    File.Copy(newPath, newPath.Replace(Config.LoadString, destinationPath), true);
+            }             
         }
 
         public static void LoadSaveGames(string sourcePath)
         {
             foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
             {
-                Directory.CreateDirectory(dirPath.Replace(sourcePath, Config.LoadString));
+                if (dirPath.Contains("profile_"))
+                    Directory.CreateDirectory(dirPath.Replace(sourcePath, Config.LoadString));
             }
-
-            foreach (string newPath in Directory.GetFiles(Config.LoadString, "*.*", SearchOption.AllDirectories))
+            
+            foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
             {
-                File.Copy(newPath, newPath.Replace(sourcePath, Config.LoadString), true);
-            }
+                if (newPath.Contains("profile_"))
+                    File.Copy(newPath, newPath.Replace(sourcePath, Config.LoadString), true);
+            }            
         }
 
         public static bool ValidatePath(string path)
         {
-            var files = Directory.GetFiles(path);
+            //var files = Directory.GetFiles(path);
             var directories = Directory.GetDirectories(path);
 
-            if(files.Contains("remotecache.vdf") && directories.Contains("remote"))
+            if(directories.Count() != 0)
             {
-                return true;
+                foreach(var dir in directories)
+                {
+                    if(dir.Contains("profile_"))
+                    {
+                        return true;
+                    }
+                }
             }
 
             return false;

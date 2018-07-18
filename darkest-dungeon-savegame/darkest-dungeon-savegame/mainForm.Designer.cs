@@ -49,27 +49,27 @@
             // 
             // SaveGame_bt
             // 
-            this.SaveGame_bt.Location = new System.Drawing.Point(88, 163);
+            this.SaveGame_bt.Location = new System.Drawing.Point(91, 140);
             this.SaveGame_bt.Name = "SaveGame_bt";
-            this.SaveGame_bt.Size = new System.Drawing.Size(75, 23);
+            this.SaveGame_bt.Size = new System.Drawing.Size(126, 23);
             this.SaveGame_bt.TabIndex = 0;
-            this.SaveGame_bt.Text = "Save Game";
+            this.SaveGame_bt.Text = "Save savegame copy";
             this.SaveGame_bt.UseVisualStyleBackColor = true;
             this.SaveGame_bt.Click += new System.EventHandler(this.SaveGame_bt_Click);
             // 
             // LoadGame_bt
             // 
-            this.LoadGame_bt.Location = new System.Drawing.Point(169, 164);
+            this.LoadGame_bt.Location = new System.Drawing.Point(223, 140);
             this.LoadGame_bt.Name = "LoadGame_bt";
-            this.LoadGame_bt.Size = new System.Drawing.Size(75, 23);
+            this.LoadGame_bt.Size = new System.Drawing.Size(126, 23);
             this.LoadGame_bt.TabIndex = 1;
-            this.LoadGame_bt.Text = "Load Game";
+            this.LoadGame_bt.Text = "Load savegame copy";
             this.LoadGame_bt.UseVisualStyleBackColor = true;
             this.LoadGame_bt.Click += new System.EventHandler(this.LoadGame_bt_Click);
             // 
             // SetLoadPath_bt
             // 
-            this.SetLoadPath_bt.Location = new System.Drawing.Point(292, 163);
+            this.SetLoadPath_bt.Location = new System.Drawing.Point(371, 140);
             this.SetLoadPath_bt.Name = "SetLoadPath_bt";
             this.SetLoadPath_bt.Size = new System.Drawing.Size(88, 23);
             this.SetLoadPath_bt.TabIndex = 3;
@@ -80,7 +80,7 @@
             // Output_lb
             // 
             this.Output_lb.AutoSize = true;
-            this.Output_lb.Location = new System.Drawing.Point(88, 106);
+            this.Output_lb.Location = new System.Drawing.Point(88, 75);
             this.Output_lb.Name = "Output_lb";
             this.Output_lb.Size = new System.Drawing.Size(144, 13);
             this.Output_lb.TabIndex = 4;
@@ -92,7 +92,7 @@
             this.CurrentLoadPath_lb.AutoSize = true;
             this.CurrentLoadPath_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CurrentLoadPath_lb.Location = new System.Drawing.Point(8, 34);
-            this.CurrentLoadPath_lb.MaximumSize = new System.Drawing.Size(450, 39);
+            this.CurrentLoadPath_lb.MaximumSize = new System.Drawing.Size(469, 39);
             this.CurrentLoadPath_lb.Name = "CurrentLoadPath_lb";
             this.CurrentLoadPath_lb.Size = new System.Drawing.Size(91, 13);
             this.CurrentLoadPath_lb.TabIndex = 5;
@@ -139,7 +139,7 @@
             this.Slots_gb.Controls.Add(this.Slot1_rb);
             this.Slots_gb.Controls.Add(this.Slot3_rb);
             this.Slots_gb.Controls.Add(this.Slot2_rb);
-            this.Slots_gb.Location = new System.Drawing.Point(10, 99);
+            this.Slots_gb.Location = new System.Drawing.Point(10, 75);
             this.Slots_gb.Name = "Slots_gb";
             this.Slots_gb.Size = new System.Drawing.Size(72, 87);
             this.Slots_gb.TabIndex = 9;
@@ -154,7 +154,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(396, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(471, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 197);
+            this.ClientSize = new System.Drawing.Size(471, 172);
             this.Controls.Add(this.Slots_gb);
             this.Controls.Add(this.CurrentLoadPath_lb);
             this.Controls.Add(this.Output_lb);

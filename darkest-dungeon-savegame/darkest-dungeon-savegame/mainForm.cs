@@ -103,7 +103,7 @@ namespace darkest_dungeon_savegame
 
         private void LoadGame_bt_Click(object sender, EventArgs e)
         {
-            DialogResult prompt = MessageBox.Show("Do you really want to load local save copy to game? This will overwrite your current game progress.",
+            DialogResult prompt = MessageBox.Show("Do you really want to load local save copy to the game? This will overwrite your current game progress.",
                "Loading savegames", MessageBoxButtons.YesNo);
 
             if (prompt == DialogResult.Yes)
@@ -123,19 +123,19 @@ namespace darkest_dungeon_savegame
 
                                 targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_1\");
                                 Directory.CreateDirectory(targetDir);
-                                FileHelper.CopySaveGames(targetDir);
+                                FileHelper.LoadSaveGames(targetDir);
                                 break;
 
                             case "Slot2_rb":
                                 targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_2\");
                                 Directory.CreateDirectory(targetDir);
-                                FileHelper.CopySaveGames(targetDir);
+                                FileHelper.LoadSaveGames(targetDir);
                                 break;
 
                             case "Slot3_rb":
                                 targetDir = Path.Combine(Config.LocalSavesLocation, @"slot_3\");
                                 Directory.CreateDirectory(targetDir);
-                                FileHelper.CopySaveGames(targetDir);
+                                FileHelper.LoadSaveGames(targetDir);
                                 break;
 
                         }
@@ -202,10 +202,11 @@ namespace darkest_dungeon_savegame
 
         private void howToFindSavesPathToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult prompt = MessageBox.Show("There are few typical locations for D savegames. \nSteam usually stores it in a folder \"262060\". \nFew possible locations:\n"+
-                "\n- C:\\Program Files (x86)\\Steam\\userdata\\<your_user_id>\\262060 |(Steam)" +
-                "\n- C:\\Users\\<your username>\\Documents\\Darkest | (GOG)" +
-                "\n- /Users/<username>/Library/Application Support/Darkest | (MAC)",
+            DialogResult prompt = MessageBox.Show("There are few typical locations for DD savegames. " +
+                "\nSteam usually stores it in a folder \"262060\\remote\". \nFolder should contain \"profile_0\" folder. \n\nFew possible locations:\n"+
+                "\n- C:\\Program Files (x86)\\Steam\\userdata\\<your_user_id>\\262060\\remote (Steam)" +
+                "\n- C:\\Users\\<your username>\\Documents\\Darkest (GOG)" +
+                "\n- /Users/<username>/Library/Application Support/Darkest (MAC)",
                 "How to find DD saves path", MessageBoxButtons.OK);
         }
 
@@ -213,8 +214,8 @@ namespace darkest_dungeon_savegame
         {
             DialogResult prompt = MessageBox.Show("This is the application for managing savegames of the Darkest Dungeon game.\n" +
                 "Interface:\n\n" +
-                "- Save Game: Make local copy of DD saves at selected slot\n" +
-                "- Load Game: Load local copy from selected slot to DD saves\n" +
+                "- Save savegame copy: Make local copy of DD saves at selected slot\n" +
+                "- Load savegame copy: Load local copy from selected slot to DD saves\n" +
                 "- Set saves path: Set path where DD stores savegames, to copy/paste to.\n\n" +
                 "In memory of my lvl 5 ocultist who died from two spider bites, which got me triggered enough to write this app.",
             "Instructions", MessageBoxButtons.OK);
