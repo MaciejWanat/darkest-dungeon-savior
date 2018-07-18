@@ -154,24 +154,28 @@ namespace darkest_dungeon_savegame
         {
             try
             {
-                if(Directory.Exists(LoadPath_tb.Text))
+                if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    Config.SetLoadString(LoadPath_tb.Text);
+                    LoadPath_tb.Text = folderBrowserDialog1.SelectedPath;
+                    if (Directory.Exists(LoadPath_tb.Text))
+                    {
+                        Config.SetLoadString(LoadPath_tb.Text);
 
-                    string configString = File.ReadAllText(Config.ConfigString).TrimEnd('\\');
-                    dynamic json = JsonConvert.DeserializeObject(configString);
+                        string configString = File.ReadAllText(Config.ConfigString).TrimEnd('\\');
+                        dynamic json = JsonConvert.DeserializeObject(configString);
 
-                    json.LoadString = Config.LoadString;
+                        json.LoadString = Config.LoadString;
 
-                    configString = JsonConvert.SerializeObject(json);
-                    File.WriteAllText(Config.ConfigString, configString);
-                    Output_lb.Text = "New load path set up succesfuly.";
-                    CurrentLoadPath_lb.Text = "Current load path: " + Config.LoadString;
-                }
-                else
-                {
-                    Output_lb.Text = "Your input isn't a directory.";
-                }
+                        configString = JsonConvert.SerializeObject(json);
+                        File.WriteAllText(Config.ConfigString, configString);
+                        Output_lb.Text = "New load path set up succesfuly.";
+                        CurrentLoadPath_lb.Text = "Current load path: " + Config.LoadString;
+                    }
+                    else
+                    {
+                        Output_lb.Text = "Your input isn't a directory.";
+                    }
+                }                
             }
             catch(Exception)
             {

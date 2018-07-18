@@ -67,6 +67,7 @@
             // 
             // LoadPath_tb
             // 
+            this.LoadPath_tb.Enabled = false;
             this.LoadPath_tb.Location = new System.Drawing.Point(16, 261);
             this.LoadPath_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoadPath_tb.Name = "LoadPath_tb";
