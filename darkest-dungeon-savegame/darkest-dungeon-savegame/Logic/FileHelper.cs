@@ -19,8 +19,20 @@ namespace darkest_dungeon_savegame.Logic
             foreach (string newPath in Directory.GetFiles(Config.LoadString, "*.*", SearchOption.AllDirectories))
             {
                 File.Copy(newPath, newPath.Replace(Config.LoadString, destinationPath), true);
+            }                
+        }
+
+        public static void LoadSaveGames(string sourcePath)
+        {
+            foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+            {
+                Directory.CreateDirectory(dirPath.Replace(sourcePath, Config.LoadString));
             }
-                
+
+            foreach (string newPath in Directory.GetFiles(Config.LoadString, "*.*", SearchOption.AllDirectories))
+            {
+                File.Copy(newPath, newPath.Replace(sourcePath, Config.LoadString), true);
+            }
         }
     }
 }

@@ -38,14 +38,16 @@
             this.Slot2_rb = new System.Windows.Forms.RadioButton();
             this.Slot3_rb = new System.Windows.Forms.RadioButton();
             this.Slots_gb = new System.Windows.Forms.GroupBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.Slots_gb.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveGame_bt
             // 
-            this.SaveGame_bt.Location = new System.Drawing.Point(12, 183);
+            this.SaveGame_bt.Location = new System.Drawing.Point(16, 225);
+            this.SaveGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SaveGame_bt.Name = "SaveGame_bt";
-            this.SaveGame_bt.Size = new System.Drawing.Size(75, 23);
+            this.SaveGame_bt.Size = new System.Drawing.Size(100, 28);
             this.SaveGame_bt.TabIndex = 0;
             this.SaveGame_bt.Text = "Save Game";
             this.SaveGame_bt.UseVisualStyleBackColor = true;
@@ -53,9 +55,10 @@
             // 
             // LoadGame_bt
             // 
-            this.LoadGame_bt.Location = new System.Drawing.Point(93, 183);
+            this.LoadGame_bt.Location = new System.Drawing.Point(124, 225);
+            this.LoadGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoadGame_bt.Name = "LoadGame_bt";
-            this.LoadGame_bt.Size = new System.Drawing.Size(75, 23);
+            this.LoadGame_bt.Size = new System.Drawing.Size(100, 28);
             this.LoadGame_bt.TabIndex = 1;
             this.LoadGame_bt.Text = "Load Game";
             this.LoadGame_bt.UseVisualStyleBackColor = true;
@@ -63,16 +66,18 @@
             // 
             // LoadPath_tb
             // 
-            this.LoadPath_tb.Location = new System.Drawing.Point(12, 212);
+            this.LoadPath_tb.Location = new System.Drawing.Point(16, 261);
+            this.LoadPath_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoadPath_tb.Name = "LoadPath_tb";
-            this.LoadPath_tb.Size = new System.Drawing.Size(338, 20);
+            this.LoadPath_tb.Size = new System.Drawing.Size(449, 22);
             this.LoadPath_tb.TabIndex = 2;
             // 
             // SetLoadPath_bt
             // 
-            this.SetLoadPath_bt.Location = new System.Drawing.Point(368, 212);
+            this.SetLoadPath_bt.Location = new System.Drawing.Point(487, 258);
+            this.SetLoadPath_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SetLoadPath_bt.Name = "SetLoadPath_bt";
-            this.SetLoadPath_bt.Size = new System.Drawing.Size(117, 23);
+            this.SetLoadPath_bt.Size = new System.Drawing.Size(156, 28);
             this.SetLoadPath_bt.TabIndex = 3;
             this.SetLoadPath_bt.Text = "Set saves path";
             this.SetLoadPath_bt.UseVisualStyleBackColor = true;
@@ -81,19 +86,22 @@
             // Output_lb
             // 
             this.Output_lb.AutoSize = true;
-            this.Output_lb.Location = new System.Drawing.Point(16, 34);
+            this.Output_lb.Location = new System.Drawing.Point(21, 42);
+            this.Output_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Output_lb.Name = "Output_lb";
-            this.Output_lb.Size = new System.Drawing.Size(35, 13);
+            this.Output_lb.Size = new System.Drawing.Size(190, 17);
             this.Output_lb.TabIndex = 4;
-            this.Output_lb.Text = "label1";
+            this.Output_lb.Text = "Communication with user text";
+            this.Output_lb.Click += new System.EventHandler(this.Output_lb_Click);
             // 
             // CurrentLoadPath_lb
             // 
             this.CurrentLoadPath_lb.AutoSize = true;
             this.CurrentLoadPath_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(16, 9);
+            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(21, 11);
+            this.CurrentLoadPath_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CurrentLoadPath_lb.Name = "CurrentLoadPath_lb";
-            this.CurrentLoadPath_lb.Size = new System.Drawing.Size(109, 13);
+            this.CurrentLoadPath_lb.Size = new System.Drawing.Size(140, 17);
             this.CurrentLoadPath_lb.TabIndex = 5;
             this.CurrentLoadPath_lb.Text = "Current load path:";
             this.CurrentLoadPath_lb.Click += new System.EventHandler(this.CurrentLoadPath_lb_Click);
@@ -102,9 +110,10 @@
             // 
             this.Slot1_rb.AutoSize = true;
             this.Slot1_rb.Checked = true;
-            this.Slot1_rb.Location = new System.Drawing.Point(6, 19);
+            this.Slot1_rb.Location = new System.Drawing.Point(8, 23);
+            this.Slot1_rb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Slot1_rb.Name = "Slot1_rb";
-            this.Slot1_rb.Size = new System.Drawing.Size(52, 17);
+            this.Slot1_rb.Size = new System.Drawing.Size(65, 21);
             this.Slot1_rb.TabIndex = 6;
             this.Slot1_rb.TabStop = true;
             this.Slot1_rb.Text = "Slot 1";
@@ -114,9 +123,10 @@
             // Slot2_rb
             // 
             this.Slot2_rb.AutoSize = true;
-            this.Slot2_rb.Location = new System.Drawing.Point(6, 42);
+            this.Slot2_rb.Location = new System.Drawing.Point(8, 52);
+            this.Slot2_rb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Slot2_rb.Name = "Slot2_rb";
-            this.Slot2_rb.Size = new System.Drawing.Size(52, 17);
+            this.Slot2_rb.Size = new System.Drawing.Size(65, 21);
             this.Slot2_rb.TabIndex = 7;
             this.Slot2_rb.Text = "Slot 2";
             this.Slot2_rb.UseVisualStyleBackColor = true;
@@ -125,9 +135,10 @@
             // Slot3_rb
             // 
             this.Slot3_rb.AutoSize = true;
-            this.Slot3_rb.Location = new System.Drawing.Point(7, 65);
+            this.Slot3_rb.Location = new System.Drawing.Point(9, 80);
+            this.Slot3_rb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Slot3_rb.Name = "Slot3_rb";
-            this.Slot3_rb.Size = new System.Drawing.Size(52, 17);
+            this.Slot3_rb.Size = new System.Drawing.Size(65, 21);
             this.Slot3_rb.TabIndex = 8;
             this.Slot3_rb.Text = "Slot 3";
             this.Slot3_rb.UseVisualStyleBackColor = true;
@@ -138,18 +149,20 @@
             this.Slots_gb.Controls.Add(this.Slot1_rb);
             this.Slots_gb.Controls.Add(this.Slot3_rb);
             this.Slots_gb.Controls.Add(this.Slot2_rb);
-            this.Slots_gb.Location = new System.Drawing.Point(12, 90);
+            this.Slots_gb.Location = new System.Drawing.Point(16, 111);
+            this.Slots_gb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Slots_gb.Name = "Slots_gb";
-            this.Slots_gb.Size = new System.Drawing.Size(72, 87);
+            this.Slots_gb.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Slots_gb.Size = new System.Drawing.Size(96, 107);
             this.Slots_gb.TabIndex = 9;
             this.Slots_gb.TabStop = false;
             this.Slots_gb.Text = "Slots";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 248);
+            this.ClientSize = new System.Drawing.Size(667, 305);
             this.Controls.Add(this.Slots_gb);
             this.Controls.Add(this.CurrentLoadPath_lb);
             this.Controls.Add(this.Output_lb);
@@ -158,6 +171,7 @@
             this.Controls.Add(this.LoadGame_bt);
             this.Controls.Add(this.SaveGame_bt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Darkest Dungeon GameSaver";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -180,6 +194,7 @@
         private System.Windows.Forms.RadioButton Slot2_rb;
         private System.Windows.Forms.RadioButton Slot3_rb;
         private System.Windows.Forms.GroupBox Slots_gb;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 
