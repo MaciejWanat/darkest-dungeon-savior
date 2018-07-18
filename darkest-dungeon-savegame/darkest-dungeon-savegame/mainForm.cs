@@ -197,8 +197,13 @@ namespace darkest_dungeon_savegame
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult prompt = MessageBox.Show("Insert help instructions",
-            "How to find DD saves path", MessageBoxButtons.OK);
+            DialogResult prompt = MessageBox.Show("This is the application for managing savegames of the Darkest Dungeon game.\n" +
+                "Interface:\n\n" +
+                "- Save Game: Make local copy of DD saves at selected slot\n" +
+                "- Load Game: Load local copy from selected slot to DD saves\n" +
+                "- Set saves path: Set path where DD stores savegames, to copy/paste to.\n\n" +
+                "In memory of my lvl 5 ocultist, who died from two spider bites and triggered me enough to write this app.",
+            "Instructions", MessageBoxButtons.OK);
         }
 
         private void Slot1_rb_CheckedChanged(object sender, EventArgs e)
