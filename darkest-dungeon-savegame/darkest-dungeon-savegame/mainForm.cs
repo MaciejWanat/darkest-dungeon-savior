@@ -202,7 +202,7 @@ namespace darkest_dungeon_savegame
                 "- Save Game: Make local copy of DD saves at selected slot\n" +
                 "- Load Game: Load local copy from selected slot to DD saves\n" +
                 "- Set saves path: Set path where DD stores savegames, to copy/paste to.\n\n" +
-                "In memory of my lvl 5 ocultist, who died from two spider bites and triggered me enough to write this app.",
+                "In memory of my lvl 5 ocultist who died from two spider bites, which got me triggered enough to write this app.",
             "Instructions", MessageBoxButtons.OK);
         }
 
