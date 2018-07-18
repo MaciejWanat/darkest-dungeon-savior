@@ -34,5 +34,18 @@ namespace darkest_dungeon_savegame.Logic
                 File.Copy(newPath, newPath.Replace(sourcePath, Config.LoadString), true);
             }
         }
+
+        public static bool ValidatePath(string path)
+        {
+            var files = Directory.GetFiles(path);
+            var directories = Directory.GetDirectories(path);
+
+            if(files.Contains("remotecache.vdf") && directories.Contains("remote"))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

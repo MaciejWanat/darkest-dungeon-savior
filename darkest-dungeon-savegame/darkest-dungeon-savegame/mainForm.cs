@@ -159,7 +159,18 @@ namespace darkest_dungeon_savegame
                     var path = folderBrowserDialog1.SelectedPath;
                     if (Directory.Exists(path))
                     {
-                        Config.SetLoadString(path);
+                        if (!FileHelper.ValidatePath(path))
+                        {
+                            DialogResult prompt = MessageBox.Show("This folder doesn't look like it contains savegames. Are you sure you want to set it as a directory?",
+                            "Setting directory", MessageBoxButtons.YesNo);
+
+                            if (prompt == DialogResult.Yes)
+                            {
+                                throw new Exception();
+                            }
+                        }
+
+                        Config.SetLoadString(path);                        
 
                         string configString = File.ReadAllText(Config.ConfigString).TrimEnd('\\');
                         dynamic json = JsonConvert.DeserializeObject(configString);
@@ -184,7 +195,6 @@ namespace darkest_dungeon_savegame
             }
             
         }
-
 
         private void howToFindSavesPathToolStripMenuItem_Click(object sender, EventArgs e)
         {
