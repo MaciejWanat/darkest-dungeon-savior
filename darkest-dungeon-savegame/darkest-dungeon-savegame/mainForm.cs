@@ -47,7 +47,7 @@ namespace darkest_dungeon_savegame
                 
                 if(Config.LoadString == "None")
                 {
-                    Output_lb.Text += " Please set Darkest Dungeon directory with SaveGames (262060).";
+                    Output_lb.Text += " Please set Darkest Dungeon directory with SaveGames.";
                 }
             }
             CurrentLoadPath_lb.Text = "Current load path: " + Config.LoadString;
@@ -157,30 +157,34 @@ namespace darkest_dungeon_savegame
                 if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
                 {
                     var path = folderBrowserDialog1.SelectedPath;
+                    bool promptResult = true;
                     if (Directory.Exists(path))
                     {
                         if (!FileHelper.ValidatePath(path))
                         {
-                            DialogResult prompt = MessageBox.Show("This folder doesn't look like it contains savegames. Are you sure you want to set it as a directory?",
+                            DialogResult prompt = MessageBox.Show("This folder doesn't look like it contains DD savegames. Are you sure you want to set it as a directory?",
                             "Setting directory", MessageBoxButtons.YesNo);
 
                             if (prompt == DialogResult.No)
                             {
-                                throw new Exception();
+                                promptResult = false;
                             }
                         }
+                        
+                        if(promptResult)
+                        {
+                            Config.SetLoadString(path);
 
-                        Config.SetLoadString(path);                        
+                            string configString = File.ReadAllText(Config.ConfigString).TrimEnd('\\');
+                            dynamic json = JsonConvert.DeserializeObject(configString);
 
-                        string configString = File.ReadAllText(Config.ConfigString).TrimEnd('\\');
-                        dynamic json = JsonConvert.DeserializeObject(configString);
+                            json.LoadString = Config.LoadString;
 
-                        json.LoadString = Config.LoadString;
-
-                        configString = JsonConvert.SerializeObject(json);
-                        File.WriteAllText(Config.ConfigString, configString);
-                        Output_lb.Text = "New load path set up succesfuly.";
-                        CurrentLoadPath_lb.Text = "Current load path: " + Config.LoadString;
+                            configString = JsonConvert.SerializeObject(json);
+                            File.WriteAllText(Config.ConfigString, configString);
+                            Output_lb.Text = "New load path set up succesfuly.";
+                            CurrentLoadPath_lb.Text = "Current load path: " + Config.LoadString;
+                        }
                     }
                     else
                     {

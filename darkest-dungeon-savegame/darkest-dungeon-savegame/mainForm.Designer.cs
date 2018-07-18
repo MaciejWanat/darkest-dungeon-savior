@@ -49,10 +49,9 @@
             // 
             // SaveGame_bt
             // 
-            this.SaveGame_bt.Location = new System.Drawing.Point(117, 201);
-            this.SaveGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaveGame_bt.Location = new System.Drawing.Point(88, 163);
             this.SaveGame_bt.Name = "SaveGame_bt";
-            this.SaveGame_bt.Size = new System.Drawing.Size(100, 28);
+            this.SaveGame_bt.Size = new System.Drawing.Size(75, 23);
             this.SaveGame_bt.TabIndex = 0;
             this.SaveGame_bt.Text = "Save Game";
             this.SaveGame_bt.UseVisualStyleBackColor = true;
@@ -60,10 +59,9 @@
             // 
             // LoadGame_bt
             // 
-            this.LoadGame_bt.Location = new System.Drawing.Point(225, 202);
-            this.LoadGame_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoadGame_bt.Location = new System.Drawing.Point(169, 164);
             this.LoadGame_bt.Name = "LoadGame_bt";
-            this.LoadGame_bt.Size = new System.Drawing.Size(100, 28);
+            this.LoadGame_bt.Size = new System.Drawing.Size(75, 23);
             this.LoadGame_bt.TabIndex = 1;
             this.LoadGame_bt.Text = "Load Game";
             this.LoadGame_bt.UseVisualStyleBackColor = true;
@@ -71,10 +69,9 @@
             // 
             // SetLoadPath_bt
             // 
-            this.SetLoadPath_bt.Location = new System.Drawing.Point(390, 201);
-            this.SetLoadPath_bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SetLoadPath_bt.Location = new System.Drawing.Point(292, 163);
             this.SetLoadPath_bt.Name = "SetLoadPath_bt";
-            this.SetLoadPath_bt.Size = new System.Drawing.Size(117, 28);
+            this.SetLoadPath_bt.Size = new System.Drawing.Size(88, 23);
             this.SetLoadPath_bt.TabIndex = 3;
             this.SetLoadPath_bt.Text = "Set saves path";
             this.SetLoadPath_bt.UseVisualStyleBackColor = true;
@@ -83,10 +80,9 @@
             // Output_lb
             // 
             this.Output_lb.AutoSize = true;
-            this.Output_lb.Location = new System.Drawing.Point(117, 131);
-            this.Output_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Output_lb.Location = new System.Drawing.Point(88, 106);
             this.Output_lb.Name = "Output_lb";
-            this.Output_lb.Size = new System.Drawing.Size(190, 17);
+            this.Output_lb.Size = new System.Drawing.Size(144, 13);
             this.Output_lb.TabIndex = 4;
             this.Output_lb.Text = "Communication with user text";
             this.Output_lb.Click += new System.EventHandler(this.Output_lb_Click);
@@ -94,12 +90,11 @@
             // CurrentLoadPath_lb
             // 
             this.CurrentLoadPath_lb.AutoSize = true;
-            this.CurrentLoadPath_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(10, 42);
-            this.CurrentLoadPath_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.CurrentLoadPath_lb.MaximumSize = new System.Drawing.Size(555, 48);
+            this.CurrentLoadPath_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.CurrentLoadPath_lb.Location = new System.Drawing.Point(8, 34);
+            this.CurrentLoadPath_lb.MaximumSize = new System.Drawing.Size(450, 39);
             this.CurrentLoadPath_lb.Name = "CurrentLoadPath_lb";
-            this.CurrentLoadPath_lb.Size = new System.Drawing.Size(140, 17);
+            this.CurrentLoadPath_lb.Size = new System.Drawing.Size(91, 13);
             this.CurrentLoadPath_lb.TabIndex = 5;
             this.CurrentLoadPath_lb.Text = "Current load path:";
             this.CurrentLoadPath_lb.Click += new System.EventHandler(this.CurrentLoadPath_lb_Click);
@@ -108,10 +103,9 @@
             // 
             this.Slot1_rb.AutoSize = true;
             this.Slot1_rb.Checked = true;
-            this.Slot1_rb.Location = new System.Drawing.Point(8, 23);
-            this.Slot1_rb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Slot1_rb.Location = new System.Drawing.Point(6, 19);
             this.Slot1_rb.Name = "Slot1_rb";
-            this.Slot1_rb.Size = new System.Drawing.Size(65, 21);
+            this.Slot1_rb.Size = new System.Drawing.Size(52, 17);
             this.Slot1_rb.TabIndex = 6;
             this.Slot1_rb.TabStop = true;
             this.Slot1_rb.Text = "Slot 1";
@@ -121,10 +115,9 @@
             // Slot2_rb
             // 
             this.Slot2_rb.AutoSize = true;
-            this.Slot2_rb.Location = new System.Drawing.Point(8, 52);
-            this.Slot2_rb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Slot2_rb.Location = new System.Drawing.Point(6, 42);
             this.Slot2_rb.Name = "Slot2_rb";
-            this.Slot2_rb.Size = new System.Drawing.Size(65, 21);
+            this.Slot2_rb.Size = new System.Drawing.Size(52, 17);
             this.Slot2_rb.TabIndex = 7;
             this.Slot2_rb.Text = "Slot 2";
             this.Slot2_rb.UseVisualStyleBackColor = true;
@@ -133,10 +126,9 @@
             // Slot3_rb
             // 
             this.Slot3_rb.AutoSize = true;
-            this.Slot3_rb.Location = new System.Drawing.Point(9, 80);
-            this.Slot3_rb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Slot3_rb.Location = new System.Drawing.Point(7, 65);
             this.Slot3_rb.Name = "Slot3_rb";
-            this.Slot3_rb.Size = new System.Drawing.Size(65, 21);
+            this.Slot3_rb.Size = new System.Drawing.Size(52, 17);
             this.Slot3_rb.TabIndex = 8;
             this.Slot3_rb.Text = "Slot 3";
             this.Slot3_rb.UseVisualStyleBackColor = true;
@@ -147,11 +139,9 @@
             this.Slots_gb.Controls.Add(this.Slot1_rb);
             this.Slots_gb.Controls.Add(this.Slot3_rb);
             this.Slots_gb.Controls.Add(this.Slot2_rb);
-            this.Slots_gb.Location = new System.Drawing.Point(13, 122);
-            this.Slots_gb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Slots_gb.Location = new System.Drawing.Point(10, 99);
             this.Slots_gb.Name = "Slots_gb";
-            this.Slots_gb.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Slots_gb.Size = new System.Drawing.Size(96, 107);
+            this.Slots_gb.Size = new System.Drawing.Size(72, 87);
             this.Slots_gb.TabIndex = 9;
             this.Slots_gb.TabStop = false;
             this.Slots_gb.Text = "Slots";
@@ -163,7 +153,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(528, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(396, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -173,28 +164,28 @@
             this.howToFindSavesPathToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // howToFindSavesPathToolStripMenuItem
             // 
             this.howToFindSavesPathToolStripMenuItem.Name = "howToFindSavesPathToolStripMenuItem";
-            this.howToFindSavesPathToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.howToFindSavesPathToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.howToFindSavesPathToolStripMenuItem.Text = "How to find saves path";
             this.howToFindSavesPathToolStripMenuItem.Click += new System.EventHandler(this.howToFindSavesPathToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 242);
+            this.ClientSize = new System.Drawing.Size(396, 197);
             this.Controls.Add(this.Slots_gb);
             this.Controls.Add(this.CurrentLoadPath_lb);
             this.Controls.Add(this.Output_lb);
@@ -205,7 +196,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Darkest Dungeon GameSaver";
             this.Load += new System.EventHandler(this.MainForm_Load);
